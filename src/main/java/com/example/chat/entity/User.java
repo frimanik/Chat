@@ -24,7 +24,7 @@ public class User implements UserDetails {
     private Long id;
     private String username;
     private String password;
-    private boolean active;//
+    private boolean active;
 
     @ElementCollection(targetClass = Role.class, fetch = FetchType.EAGER)
     @CollectionTable(name = "user_role", joinColumns = @JoinColumn(name = "user_id"))

@@ -1,5 +1,5 @@
 package com.example.chat.controllers;
-//Chat rooms. And be done with it. ANd be done with it! AND BE DONW WITH IT!!!
+
 import com.example.chat.entity.Message;
 import com.example.chat.entity.User;
 import com.example.chat.repos.MessageRepo;
@@ -32,7 +32,7 @@ public class MainController {
     }
 
     @GetMapping("/chat")
-    public String chat(@RequestParam(required = false, defaultValue = "") String filter, Model model) {
+        public String chat(@RequestParam(required = false, defaultValue = "") String filter, Model model) {
         Iterable<Message> messages = messageRepo.findAll();
 
         if (filter != null && !filter.isEmpty()) {
